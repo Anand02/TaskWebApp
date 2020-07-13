@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body, html {
+    display: flex;
+    flex-direction: column;
+    font-size:14px;
+    font-family: Arial !important;  
+}
+p {
+    line-height: 1.3em !important;
+    font-family: inherit !important;
+    font-size:14px !important;
+}
+form {
+    margin: 0 auto !important;
+    display:flex;
+    flex-direction: column;
+    height:100%;
+}
+.form-wrapper{
+    margin: 0 auto !important;
+    font-size: 0.8em;
+    height:100%;
+    width:80%;
+}
+.container-1, .nested-box-1-1 {
+    display: flex;
+    flex-direction:column;
+}
+.container-1 div {
+    padding:5px;   
+}
+h1{
+    font-size: 28px !important;   
+}
+h3{
+    font-size:16px !important;
+    font-weight: bold !important;
+    margin-bottom:5px !important;
+}
+.navbar {
+    padding:15px !important;
+    background:#00A1D3;  
+}
+.navbar a {
+    text-decoration:none;
+    color:white;
+    padding:15px !important;
+    font-size:14px;
+}
+.navbar a:hover {
+    background:black;
+    padding:15px !important;
+}
+.sample-paragraph {
+    line-height:1.75em !important;  
+}
+.paragraph-link {
+    color:#00A1D3;
+}
+.paragraph-link:hover {
+    color:rgb(1, 121, 158) !important;
+}
+div .bio-1 a, div .bio-2 a {
+    text-decoration:none;
+    font-size:11px;
+    color:#00A1D3;
+    font-weight: bold;
+    font-size: 11px !important;
+}
+div .bio-1 a:hover, div .bio-2 a:hover {
+    color:rgb(1, 121, 158) !important;
+}
+
+div.block label, .first-name, span { 
+    font-size: 11px !important;     
+}
+input, #inputState{
+    width:100%;
+    height: 25px;
+    border-radius:3px;
+    cursor: pointer;
+    margin:0 auto !important;
+    border: 1px solid #ccc !important;
+    text-indent:5px;
+}
+.contact-btn {
+    background: #00A1D3;
+    height:40px;
+    color:#ffffff;
+    font-size: 14px !important;
+    margin-top:15px;
+    cursor:pointer;
+}
+
+.footer{
+    background:#00A1D3;
+    color:white;
+    font-style: italic;
+    bottom:0;
+    width:980px;
+    position:fixed;
+    text-align: left !important;
+}
+@-webkit-keyframes grow {
+    40% {
+        transform: scale(.8);
+        stroke-width: 4px;
+        fill-opacity: 0;
+        fill:#4ca536;
+    }
+    60% {
+        fill:#5dc842;
+    }
+    80%{
+        fill:#1b771f;
+    }
+    100% {
+        transform: scale(0.9);
+        stroke-width: 8px;
+        fill-opacity: 1;
+        fill: #29be00;
+    }
+}
+@-moz-keyframes grow {
+    40% {
+        transform: scale(.8);
+        stroke-width: 4px;
+        fill-opacity: 0;
+        fill:#4ca536;
+    }
+    60% {
+        fill:#5dc842;
+    }
+    80%{
+        fill:#1b771f;
+    }
+    100% {
+        transform: scale(0.9);
+        stroke-width: 8px;
+        fill-opacity: 1;
+        fill: #29be00;
+    }
+}
+@-o-keyframes grow {
+    40% {
+        transform: scale(.8);
+        stroke-width: 4px;
+        fill-opacity: 0;
+        fill:#4ca536;
+    }
+    60% {
+        fill:#5dc842;
+    }
+    80%{
+        fill:#1b771f;
+    }
+    100% {
+        transform: scale(0.9);
+        stroke-width: 8px;
+        fill-opacity: 1;
+        fill: #29be00;
+    }
+}
+@keyframes grow {
+    40% {
+        transform: scale(.8);
+        stroke-width: 4px;
+        fill-opacity: 0;
+        fill:#4ca536;
+    }
+    60% {
+        fill:#5dc842;
+    }
+    80%{
+        fill:#1b771f;
+    }
+    100% {
+        transform: scale(0.9);
+        stroke-width: 8px;
+        fill-opacity: 1;
+        fill: #29be00;
+    }
+}
+@-webkit-keyframes grow2 {
+    40% {
+        transform: scale(.8);
+        stroke-width: 4px;
+        fill-opacity: 0;
+        fill:#b6b6b6;
+    }
+    60% {
+        fill: rgb(121, 121, 121);
+    }
+    80%{
+        fill: #414040;
+    }
+    100% {
+        transform: scale(0.9);
+        stroke-width: 8px;
+        fill-opacity: 1;
+        fill: #0a2403;
+    }
+}
+@-moz-keyframes grow2 {
+    40% {
+        transform: scale(.8);
+        stroke-width: 4px;
+        fill-opacity: 0;
+        fill:#b6b6b6;
+    }
+    60% {
+        fill: rgb(121, 121, 121);
+    }
+    80%{
+        fill: #414040;
+    }
+    100% {
+        transform: scale(0.9);
+        stroke-width: 8px;
+        fill-opacity: 1;
+        fill: #0a2403;
+    }
+}
+@-o-keyframes grow2 {
+    40% {
+        transform: scale(.8);
+        stroke-width: 4px;
+        fill-opacity: 0;
+        fill:#b6b6b6;
+    }
+    60% {
+        fill: rgb(121, 121, 121);
+    }
+    80%{
+        fill: #414040;
+    }
+    100% {
+        transform: scale(0.9);
+        stroke-width: 8px;
+        fill-opacity: 1;
+        fill: #0a2403;
+    }
+}
+@keyframes grow2 {
+    40% {
+        transform: scale(.8);
+        stroke-width: 4px;
+        fill-opacity: 0;
+        fill:#b6b6b6;
+    }
+    60% {
+        fill: rgb(121, 121, 121);
+    }
+    80%{
+        fill: #414040;
+    }
+    100% {
+        transform: scale(0.9);
+        stroke-width: 8px;
+        fill-opacity: 1;
+        fill: #0a2403;
+    }
+}
+
+label.error {
+    background: url(images/error.gif) no-repeat;
+    padding-left: 16px;
+    margin-left: .3em;
+}
+
+.tick {
+    fill-opacity: 0;
+    stroke-width: 16px;
+    transform-origin: center;
+    transform: scale(0);
+    -webkit-animation: grow 1.3s cubic-bezier(.25, .25, .25, 2) forwards; /* Safari 4+ */
+    -moz-animation: grow 1.3s cubic-bezier(.25, .25, .25, 2) forwards; /* Fx 5+ */
+    -o-animation: grow 1.3s cubic-bezier(.25, .25, .25, 2) forwards; /* Opera 12+ */
+    animation: grow 1.3s cubic-bezier(.25, .25, .25, 2) forwards;  
+}
+.circle {
+    fill-opacity: 0;
+    position: relative;
+    stroke-width: 16px;
+    transform-origin: center;
+    transform: scale(0);
+    -webkit-animation: grow2 0.8s cubic-bezier(.25, .25, .25, 2) forwards; /* Safari 4+ */
+    -moz-animation: grow2 0.8s cubic-bezier(.25, .25, .25, 2) forwards; /* Fx 5+ */
+    -o-animation: grow2 0.8s cubic-bezier(.25, .25, .25, 2) forwards; /* Opera 12+ */
+    animation: grow2 0.8s cubic-bezier(.25, .25, .25, 2) forwards;     
+}
+
+select {
+    padding: 0.1em 0.1em 0.1em 0.5em;
+    height:30px !important;
+    background-color: white;
+    border: thin solid black;
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+}
+select#inputState {
+    background-image:
+      linear-gradient(45deg, transparent 50%, rgb(22, 22, 22) 50%),
+      linear-gradient(135deg, rgb(19, 19, 20) 50%, transparent 50%),
+      linear-gradient(to bottom, rgb(236, 236, 236), rgb(200, 200, 200));
+    background-position:
+      calc(100% - 10px) calc(0.6em + 2px),
+      calc(100% - 5px) calc(0.6em + 2px),
+      100% 55%;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1.7em 1.5em;
+    background-repeat: no-repeat;
+}
+select#inputState:focus {
+    background-image:
+      linear-gradient(45deg, rgb(236, 236, 236) 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, rgb(236, 236, 236) 50%),
+      linear-gradient(to bottom, rgb(175, 175, 175), rgb(22, 22, 22));
+    background-position:
+    calc(100% - 5px) 1em,
+    calc(100% - 10px) 1em,
+      100% 50%;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1.7em 1.5em;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+}
+
+@media screen and (max-width:480px){
+
+    body{
+        height:100vh !important;  
+    }
+    .container-1 div {
+        border:none;
+        
+    }
+    .container-1 {
+        flex: 1 0 auto;
+        
+    }
+    .market-logo {
+        content:url(../images/logo_small.png);
+        position: absolute;
+        background:white;
+        margin-top:10px !important;
+        padding: 0 5vw !important; 
+    }
+    .box-1 {
+        content:url(../images/banner_small.jpg); 
+        margin:0 auto !important;
+        padding: 0px !important;
+        max-width: 100%;
+    }
+    .navbar{
+        display:flex;
+        flex-direction: column;
+        background:#00A1D3;
+        height:auto !important;
+        order:4;
+        margin-bottom:35px !important;
+    }
+    .navbar a {
+        text-decoration:none;
+        color:white;
+        border: 1px solid white !important;
+        border-radius:10px;
+        padding: 15px !important;
+        margin: 10px !important;
+    }
+    hr {
+        border-bottom: 1px solid #ccc !important;
+        width:90% !important;
+        margin: 10px auto !important;   
+    }
+    .nested-box-1, .nested-box-1-2 {
+        margin:0 !important;
+        padding: 0px !important; 
+    }
+    .nested-box-1-1 {
+        width:90% !important;
+        margin-left: 0.8em !important;
+    }
+    
+    .nested-box-1-2-1, .nested-box-1-2-2  {
+        display:flex;
+    }
+    .body-container{
+        order:2;
+        padding: 0 !important;
+    }
+    .footer{
+        order:5;
+        background:white;  
+        color:black;
+    }
+    .contact-btn {
+        width:100%;
+        border:none;
+        border-radius:3px;
+    }
+    div .navbar .nav-link-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .sample-paragraph {
+        line-height: 1.5em !important;
+    }
+    label {
+        margin-bottom:5px !important;
+    }
+    .box-3-1 {
+        background:white;
+        color:black;
+        font-style: italic;
+        bottom:0;
+        left: 0%;
+        width:980px;
+        position:fixed;
+        height:20px !important;
+    }
+    div .block {
+        padding: 5px !important;
+        margin-top:10px !important
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width:768px){
+
+    .box-1 {
+        content:url(../images/banner_medium.jpg);
+        margin:0 auto !important;
+        padding: 0px !important;
+        max-width: 100%;
+    }
+      .market-logo {
+        content:url(../images/logo_medium.png);
+        position: absolute;
+        background:white;
+        margin-top:20px;
+        padding: 0 25px !important; 
+    }
+    .body-container{
+        display:flex;
+        padding-bottom:30px !important;
+    }
+    .nested-box-1 {
+        display:flex;
+        flex-direction: column;
+        flex: 2; 
+    }
+    .nested-box-2 {
+        display:flex;
+        flex:1;
+    }
+    .nested-box-1-2 {
+        display:flex;
+    }
+    .nested-box-1-2-1 { 
+        display:flex;
+        flex-direction: column;
+    }
+    a img {
+        display:none;
+    }
+    hr {
+        display: none;
+    }
+    .form-wrapper {
+        padding: 0 !important;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top:40px !important;
+        width:100%;
+    }
+    div .block {
+        padding: 10px !important;
+    }
+    label {
+        margin-bottom:5px !important;
+    }
+    .contact-btn {
+        width:170px;
+        height:40px;
+        border:none;
+        border-radius:3px;
+    }  
+}
+
+@media screen and (min-width:769px){
+
+    .container-1 {
+        max-width: 980px;
+        margin:0 auto !important;
+        padding: 0px !important;
+        padding-bottom:30px !important;
+    }
+    .box-1 {
+        content:url(../images/banner_large.jpg);
+        margin:0 auto !important;
+        padding: 0px !important;
+        max-width: 100%;
+    }
+    .market-logo {
+        content:url(../images/logo_large.png);
+        position: absolute;
+        background:white;
+        margin-top:20px !important;
+        padding: 0 25px !important; 
+    }
+    .body-container {
+        display:flex;
+    }
+    .form-wrapper {
+        margin-top:10px !important;
+    }
+    .nested-box-1 {
+        display:flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        flex: 2;  
+    }
+    .nested-box-2 {
+        flex:1;
+    }
+    .nested-box-1-1, .nested-box-1-2, .nested-box-1-2-1, .nested-box-1-2-2 {
+        display:flex;
+        padding-left: 0 !important;
+    }
+    hr {
+        display: none;
+    }
+    .sample-paragraph {
+        line-height:1.75em !important;
+    }
+    div .block {
+        padding: 5px !important;
+        margin-top:10px !important
+    }
+    div label {
+        margin-bottom:5px !important;
+    }
+    a img {
+        display:none;
+    }
+    .contact-btn {
+        width:170px;
+        height:40px;
+        border:none;
+        border-radius:3px;
+    }
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+</style>    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/gif">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css"> 
+    <title>Marke_tOne</title>
+</head>
+
+<body>
+  
+    <div class="container-1">
+        <div class="box-1"></div>
+        <div class="market-logo"></div>
+        <div class="navbar">
+            <a class="nav-link" href="#">PORTFOLIO</a>
+            <a class="nav-link" href="#">SERVICES</a>
+            <a class="nav-link" href="#">ABOUT US</a>
+            <a class="nav-link" href="#">CONTACT US</a>
+        </div>
+        <div class="body-container">
+            <div class="nested-box-1">
+                <div class="nested-box-1-1">
+                    <h1 class="welcome">Welcome </h1><br>
+                    <p class="sample-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#"
+                            class="paragraph-link">Duis aute irure</a> dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <hr>
+                <div class="nested-box-1-2">
+                    <div class="nested-box-1-2-1">
+                        <div class="picture-1">
+                            <img src="images/profile_1.jpg">
+                        </div>
+                        <div class="bio-1">
+                            <h3>Profile Name Here</h3>
+                            <p class="_bio1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultrices congue
+                                vulputate. Aliquam et velit sapien.<br>
+                                Aenean vel tortor id arcu sodales tincidunt. Aliquam nec fringilla dolor. Vivamus
+                                egestas </p><br>
+                            <a class="read-more" href="#">READ MORE <i class="fas fa-caret-right caret"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="nested-box-1-2-2">
+                        <div class="picture-2">
+                            <img src="images/profile_2.jpg">
+                        </div>
+                        <div class="bio-2">
+                            <h3>Profile Name Here</h3>
+                            <p class="_bio2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a diam tincidunt, congue
+                                turpis porta, semper sem.
+                                Vestibulum<br> sodales nulla non justo sollicitudin, egestas fringilla justo euismod sit
+                                amet adipiscing.</p><br>
+                            <a class="read-more" href="#">READ MORE <i class="fas fa-caret-right caret"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="nested-box-2">
+                <form class="cmxform" id="regForm" autocomplete="on">
+                    <div class="form-wrapper">
+                        <div class=" block">
+                            <label class='first-name' for="inputFirstName">First Name*</label></label>
+                            <input type="firstname" name="firstname" class="form-control" id="inputFirstName" minlength="2" placeholder="">
+                        </div>
+                        <div class="block">
+                            <label for="inputLastName">Last name*</label>
+                            <input type="lastname" name="lastname" class="form-control" id="inputLastName" placeholder="" data-validation="email required">
+                        </div>
+                        <div class="block">
+                            <label for="inputTitle">Title*</label>
+                            <input type="title" name="title" class="form-control" id="inputTitle" placeholder="">
+                        </div>
+                        <div class="block">
+                            <label for="inputEmail4">Email Address*</label>
+                            <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="">
+                        </div>
+                        <div class="block">
+                            <label for="inputPhone">Phone*</label>
+                            <input type="phone" name="phone" class="form-control" id="inputPhone">
+                        </div>
+                        <div class="block">
+                            <label for="inputState">Already a client?*</label>
+                            <select id="inputState" class="form-control required" name="input">
+                                <option value="" selected>-- Please Select --</option>
+                                <option value="o1">Yes</option>
+                                <option value="o2">No</option>
+                            </select>
+                        </div>
+                        <div class="block">
+                            <button type="submit" class="btn contact-btn">Contact Us</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright@2020 MarketOne  All rights reserved</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script type="text/javascript" src="js/form.js"></script>
+
+</body>
+</html>
